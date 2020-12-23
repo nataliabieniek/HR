@@ -18,10 +18,8 @@ void hrms::read_from_file()
     file.open("date.txt");
     if(file.good())
     {
-        int number_of_workers=0;
         while(!file.eof())
         {
-            //dziwnie drukuje
             std::string name, id, surname, depertment, position;
             std::getline(file, id);
             std::getline(file, name);
@@ -29,14 +27,34 @@ void hrms::read_from_file()
             std::getline(file, depertment);
             std::getline(file, position);
             all_workers.push_back(employee{id, name, surname, depertment, position});
-            all_workers[number_of_workers].print();
             std::cout << std::endl;
-            number_of_workers++;
         }
     }
     else 
     {
         throw WrongOpenFile();
     }
+    file.close();
+}
+void hrms::read_from_console()
+{
+    std::string name, id, surname, depertment, position;
+    std::cout << "Podaj id pracownika:" << std::endl;
+    std::cin >> id;
+    std::cout << "Podaj imie pracownika:" << std::endl;
+    std::cin >> name;
+    std::cout << "Podaj nazwisko pracownika:" << std::endl;
+    std::cin >> surname;
+    std::cout << "Podaj id departamentu pracownika:" << std::endl;
+    std::cin >> depertment;
+    std::cout << "Podaj pozycje pracownika:" << std::endl;
+    std::cin >> position;
+    all_workers.push_back(employee{id, name, surname, depertment, position});
+    
+    //zapiszemy te dane na koniec pliku
+    std::fstream file;
+    file.open("date.txt");
+
+
     file.close();
 }
