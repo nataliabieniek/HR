@@ -110,15 +110,14 @@ void hrms::print_connection_dep() //za malo mi drukuje :(
     for(int i=0; i<ilosc; i++)
     {
         int ilosc_w_dep = connection_dep[it->first].size();
-        std::cout << "Ilosc w " << it->first << " to: " << ilosc_w_dep << std::endl;
+        std::cout << "Ilosc w " << it->first << " to: \t" << ilosc_w_dep << std::endl;
+        std::string dep = it->first;
         for(int j=0; j <ilosc_w_dep; j++)
         {
-            std::cout << it->first << "\t => \t" << it->second[j] << '\n';
+            std::cout << dep << "\t => \t" << it->second[j] << '\n';
             j++;
         }
         *it++;
-    }
-        
-        
+    }   
 }
 
