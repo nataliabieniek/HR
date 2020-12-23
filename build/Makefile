@@ -168,6 +168,33 @@ src/employee.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\test.dir\build.make CMakeFiles/test.dir/src/employee.cpp.s
 .PHONY : src/employee.cpp.s
 
+src/hrms.obj: src/hrms.cpp.obj
+
+.PHONY : src/hrms.obj
+
+# target to build an object file
+src/hrms.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\test.dir\build.make CMakeFiles/test.dir/src/hrms.cpp.obj
+.PHONY : src/hrms.cpp.obj
+
+src/hrms.i: src/hrms.cpp.i
+
+.PHONY : src/hrms.i
+
+# target to preprocess a source file
+src/hrms.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\test.dir\build.make CMakeFiles/test.dir/src/hrms.cpp.i
+.PHONY : src/hrms.cpp.i
+
+src/hrms.s: src/hrms.cpp.s
+
+.PHONY : src/hrms.s
+
+# target to generate assembly for a file
+src/hrms.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\test.dir\build.make CMakeFiles/test.dir/src/hrms.cpp.s
+.PHONY : src/hrms.cpp.s
+
 src/main.obj: src/main.cpp.obj
 
 .PHONY : src/main.obj
@@ -207,6 +234,9 @@ help:
 	@echo ... src/employee.obj
 	@echo ... src/employee.i
 	@echo ... src/employee.s
+	@echo ... src/hrms.obj
+	@echo ... src/hrms.i
+	@echo ... src/hrms.s
 	@echo ... src/main.obj
 	@echo ... src/main.i
 	@echo ... src/main.s

@@ -7,15 +7,14 @@
 
 class employee
 {
-    private:
+    public:
     std::string id;
     std::string name;
     std::string surname;
     std::string departmentId;
     std::string position;
-
-    public:
-    void set(std::string id, std::string name, std::string surname, std::string depertment, std::string position );
+    employee();
+    employee(std::string id, std::string name, std::string surname, std::string depertment, std::string position);
     void print();
 };
 

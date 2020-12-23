@@ -14,13 +14,25 @@ cstdlib
 cstring
 -
 
-C:/Users/Natalia Bieniek/Desktop/studia/3 sem/HR/src/employee.cpp
+../include/hrms.hpp
+iostream
+-
+vector
+-
 employee.hpp
+-
+
+C:/Users/Natalia Bieniek/Desktop/studia/3 sem/HR/src/hrms.cpp
+employee.hpp
+-
+hrms.hpp
 -
 iostream
 -
 cstdlib
 -
-cstring
+string
+-
+fstream
 -
 

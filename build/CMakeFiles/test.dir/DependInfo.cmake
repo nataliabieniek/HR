@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "C:/Users/Natalia Bieniek/Desktop/studia/3 sem/HR/src/employee.cpp" "C:/Users/Natalia Bieniek/Desktop/studia/3 sem/HR/build/CMakeFiles/test.dir/src/employee.cpp.obj"
+  "C:/Users/Natalia Bieniek/Desktop/studia/3 sem/HR/src/hrms.cpp" "C:/Users/Natalia Bieniek/Desktop/studia/3 sem/HR/build/CMakeFiles/test.dir/src/hrms.cpp.obj"
   "C:/Users/Natalia Bieniek/Desktop/studia/3 sem/HR/src/main.cpp" "C:/Users/Natalia Bieniek/Desktop/studia/3 sem/HR/build/CMakeFiles/test.dir/src/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

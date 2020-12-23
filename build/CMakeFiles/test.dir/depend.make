@@ -4,6 +4,11 @@
 CMakeFiles/test.dir/src/employee.cpp.obj: ../include/employee.hpp
 CMakeFiles/test.dir/src/employee.cpp.obj: ../src/employee.cpp
 
+CMakeFiles/test.dir/src/hrms.cpp.obj: ../include/employee.hpp
+CMakeFiles/test.dir/src/hrms.cpp.obj: ../include/hrms.hpp
+CMakeFiles/test.dir/src/hrms.cpp.obj: ../src/hrms.cpp
+
 CMakeFiles/test.dir/src/main.cpp.obj: ../include/employee.hpp
+CMakeFiles/test.dir/src/main.cpp.obj: ../include/hrms.hpp
 CMakeFiles/test.dir/src/main.cpp.obj: ../src/main.cpp
 

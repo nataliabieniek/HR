@@ -1,4 +1,5 @@
 #include <employee.hpp>
+#include <hrms.hpp>
 #include <iostream>
 #include <cstdlib>
 #include <cstring>
@@ -7,8 +8,7 @@
 int main()
 {
     std::cout << "System dla HR" << std::endl;
-    employee pracownik;
-    pracownik.employee::set("10b", "Natalia", "Bieniek", "IT", "Software engineer");
-    pracownik.print();
+    hrms przyklad;
+    przyklad.read_from_file();
     return 0;
 }
