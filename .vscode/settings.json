@@ -39,6 +39,8 @@
         "cctype": "cpp",
         "fstream": "cpp",
         "string": "cpp",
-        "vector": "cpp"
+        "vector": "cpp",
+        "map": "cpp",
+        "xtree": "cpp"
     }
 }

@@ -108,4 +108,18 @@ void hrms::print_connection_dep()
 {
     int ilosc = connection_dep.size();
     std::cout << "Ilosc departamentow:\t" << ilosc << std::endl;
+    std::map<std::string, std::vector <std::string>>::iterator it = connection_dep.begin();
+    for(int i=0; i<ilosc; i++)
+    {
+        int ilosc_w_dep = connection_dep[it->first].size();
+        for(int j=0; j <ilosc_w_dep; j++)
+        {
+            std::cout << it->first << " => " << it->second[j] << '\n';
+            j++;
+        }
+        *it++;
+    }
+        
+        
 }
+
