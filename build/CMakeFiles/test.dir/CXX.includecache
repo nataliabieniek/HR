@@ -19,6 +19,8 @@ iostream
 -
 vector
 -
+map
+-
 employee.hpp
 -
 
@@ -34,5 +36,17 @@ cstdlib
 string
 -
 fstream
+-
+
+C:/Users/Natalia Bieniek/Desktop/studia/3 sem/HR/src/main.cpp
+employee.hpp
+-
+hrms.hpp
+-
+iostream
+-
+cstdlib
+-
+cstring
 -
 

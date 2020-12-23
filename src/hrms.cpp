@@ -104,3 +104,8 @@ void hrms::create_connection_dep()
         connection_dep[dep_obecne].push_back(all_workers[i].id);
     }
 }
+void hrms::print_connection_dep()
+{
+    int ilosc = connection_dep.size();
+    std::cout << "Ilosc departamentow:\t" << ilosc << std::endl;
+}

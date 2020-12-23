@@ -10,7 +10,10 @@ int main()
     std::cout << "System dla HR" << std::endl;
     hrms przyklad;
     przyklad.read_from_file();
-    przyklad.read_from_console();
+    //przyklad.read_from_console();
     przyklad.print_all_workers();
+    przyklad.create_connection_dep();
+    std::cout << std::endl;
+    przyklad.print_connection_dep();
     return 0;
 }

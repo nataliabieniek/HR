@@ -12,9 +12,11 @@ class hrms{
     void read_from_console(); //z konsoli wpisuje dane do all_workers
     void print_all_workers();
     void create_connection_dep();
+    void print_connection_dep();
     private:
     std::vector<employee> all_workers;
-    std::map < std::string, std::vector <std::string>> connection_dep ;
+    std::map < std::string, std::vector <std::string>> connection_dep;
+    std::map < std::string, double> salary;
 
 };
 
