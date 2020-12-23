@@ -94,3 +94,13 @@ void hrms::print_all_workers()
         std::cout << std::endl;
     }
 }
+void hrms::create_connection_dep()
+{
+    int liczba_pracownikow = all_workers.size();
+    for(int i=1; i<liczba_pracownikow; i++)
+    {
+        std::string  dep_obecne;
+        dep_obecne = all_workers[i].departmentId;
+        connection_dep[dep_obecne].push_back(all_workers[i].id);
+    }
+}
