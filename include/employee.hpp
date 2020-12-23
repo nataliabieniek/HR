@@ -16,6 +16,7 @@ class employee
 
     public:
     void set(std::string id, std::string name, std::string surname, std::string depertment, std::string position );
+    void print();
 };
 
 #endif
