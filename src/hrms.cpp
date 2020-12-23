@@ -97,14 +97,12 @@ void hrms::print_all_workers()
 void hrms::create_connection_dep()
 {
     int liczba_pracownikow = all_workers.size();
-    for(int i=1; i<liczba_pracownikow; i++)
+    for(int i=0; i<liczba_pracownikow; i++)
     {
-        std::string  dep_obecne;
-        dep_obecne = all_workers[i].departmentId;
-        connection_dep[dep_obecne].push_back(all_workers[i].id);
+        connection_dep[all_workers[i].departmentId].push_back(all_workers[i].id);
     }
 }
-void hrms::print_connection_dep()
+void hrms::print_connection_dep() //za malo mi drukuje :(
 {
     int ilosc = connection_dep.size();
     std::cout << "Ilosc departamentow:\t" << ilosc << std::endl;
@@ -112,9 +110,10 @@ void hrms::print_connection_dep()
     for(int i=0; i<ilosc; i++)
     {
         int ilosc_w_dep = connection_dep[it->first].size();
+        std::cout << "Ilosc w " << it->first << " to: " << ilosc_w_dep << std::endl;
         for(int j=0; j <ilosc_w_dep; j++)
         {
-            std::cout << it->first << " => " << it->second[j] << '\n';
+            std::cout << it->first << "\t => \t" << it->second[j] << '\n';
             j++;
         }
         *it++;
