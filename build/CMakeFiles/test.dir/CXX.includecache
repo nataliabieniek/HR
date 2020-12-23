@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/employee.hpp
+iostream
+-
+cstdlib
+-
+cstring
+-
+
+C:/Users/Natalia Bieniek/Desktop/studia/3 sem/HR/src/employee.cpp
+employee.hpp
+-
+iostream
+-
+cstdlib
+-
+cstring
+-
+

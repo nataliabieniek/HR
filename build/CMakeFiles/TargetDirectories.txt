@@ -1,0 +1,3 @@
+C:/Users/Natalia Bieniek/Desktop/studia/3 sem/HR/build/CMakeFiles/rebuild_cache.dir
+C:/Users/Natalia Bieniek/Desktop/studia/3 sem/HR/build/CMakeFiles/test.dir
+C:/Users/Natalia Bieniek/Desktop/studia/3 sem/HR/build/CMakeFiles/edit_cache.dir
