@@ -5,6 +5,18 @@
 #include <string>
 #include <fstream>
 
+std::string upper_case(std::string word)
+{
+    std::string wyraz = word;
+     for(int i=0;i<=wyraz.length();i++)
+     {
+        if(wyraz[i]>=97 && wyraz[i]<=122)
+        {
+		    wyraz[i]=wyraz[i]-32;
+        }
+     }
+    return wyraz;
+}
 class WrongOpenFile : public std::exception
 {
     virtual const char *what() const throw()
@@ -27,7 +39,6 @@ void hrms::read_from_file()
             std::getline(file, depertment);
             std::getline(file, position);
             all_workers.push_back(employee{id, name, surname, depertment, position});
-            std::cout << std::endl;
         }
     }
     else 
@@ -50,18 +61,19 @@ void hrms::read_from_console()
     std::cout << "Podaj pozycje pracownika:" << std::endl;
     std::cin >> position;
     //na duze litery
-    uppercase(id); 
-    uppercase(name);
-    uppercase(surname);
-    uppercase(depertment);
-    uppercase(position);
+    id = upper_case(id); 
+    name =upper_case(name);
+    surname = upper_case(surname);
+    depertment = upper_case(depertment);
+    position = upper_case(position);
     all_workers.push_back(employee{id, name, surname, depertment, position});
     
     //zapiszemy te dane na koniec pliku
     std::fstream file;
-    file.open("date.txt", std::ios::app);
+    file.open("date.txt", std::ios::app);;
     if(file.good())
     {
+        file << std::endl;
         file << id << std::endl;
         file << name << std::endl;
         file << surname << std::endl;
@@ -71,4 +83,14 @@ void hrms::read_from_console()
     else throw WrongOpenFile();
 
     file.close();
+}
+void hrms::print_all_workers()
+{
+    int liczba_pracownikow = all_workers.size();
+    std::cout << " Liczba wszystkich pracownikow:\t"<< liczba_pracownikow << std::endl;
+    for(int i=0; i<liczba_pracownikow; i++)
+    {
+        all_workers[i].print();
+        std::cout << std::endl;
+    }
 }
