@@ -49,12 +49,26 @@ void hrms::read_from_console()
     std::cin >> depertment;
     std::cout << "Podaj pozycje pracownika:" << std::endl;
     std::cin >> position;
+    //na duze litery
+    uppercase(id); 
+    uppercase(name);
+    uppercase(surname);
+    uppercase(depertment);
+    uppercase(position);
     all_workers.push_back(employee{id, name, surname, depertment, position});
     
     //zapiszemy te dane na koniec pliku
     std::fstream file;
-    file.open("date.txt");
-
+    file.open("date.txt", std::ios::app);
+    if(file.good())
+    {
+        file << id << std::endl;
+        file << name << std::endl;
+        file << surname << std::endl;
+        file << depertment << std::endl;
+        file << position << std::endl;
+    }
+    else throw WrongOpenFile();
 
     file.close();
 }

@@ -3,18 +3,7 @@
 #include <cstdlib>
 #include <cstring>
 
-std::string uppercase(std::string word)
-{
-    std::string wyraz = word;
-     for(int i=0;i<=wyraz.length();i++)
-     {
-        if(wyraz[i]>=97 && wyraz[i]<=122)
-        {
-		    wyraz[i]=wyraz[i]-32;
-        }
-     }
-    return wyraz;
-}
+
 employee::employee(std::string ID, std::string NAME, std::string SURNAME, std::string DEPARTMENT, std::string POSITION )
 {
     id = uppercase(ID);
