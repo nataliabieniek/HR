@@ -160,3 +160,15 @@ void hrms::print_department(std::string departmentid)
         *it++;
     }   
 }
+void hrms::add(employee employee, std::string departmentid, double sal)
+{
+    //dodanie do kontenerów
+    all_workers.push_back(employee);
+    int i = all_workers.size() - 1;
+    connection_dep[all_workers[i].departmentId].push_back(all_workers[i].id);
+    salary[departmentid] = sal;
+    //zmiany w plikach, stworz ponizej
+    
+    //czyszczenie plikow
+
+}
