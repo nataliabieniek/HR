@@ -15,5 +15,8 @@ int main()
     przyklad.create_connection_dep();
     std::cout << std::endl;
     przyklad.print_connection_dep();
+    std::cout << std::endl;
+    przyklad.read_salary();
+    przyklad.print_salary();
     return 0;
 }

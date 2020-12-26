@@ -147,5 +147,6 @@ void hrms::print_salary()
     for(int i=0; i<ilosc; i++)
     {
         std::cout << it->first << " zarabia: " << it->second << std::endl;
+        *it++;
     }
 }
