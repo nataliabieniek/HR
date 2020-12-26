@@ -89,26 +89,9 @@ void hrms::read_from_file()
     }
     file.close();
 }
-void hrms::read_from_console()
+void hrms::read_from_console(employee nowy)
 {
-    std::string name, id, surname, depertment, position;
-    std::cout << "Podaj id pracownika:" << std::endl;
-    std::cin >> id;
-    std::cout << "Podaj imie pracownika:" << std::endl;
-    std::cin >> name;
-    std::cout << "Podaj nazwisko pracownika:" << std::endl;
-    std::cin >> surname;
-    std::cout << "Podaj id departamentu pracownika:" << std::endl;
-    std::cin >> depertment;
-    std::cout << "Podaj pozycje pracownika:" << std::endl;
-    std::cin >> position;
-    //na duze litery
-    id = upper_case(id); 
-    name =upper_case(name);
-    surname = upper_case(surname);
-    depertment = upper_case(depertment);
-    position = upper_case(position);
-    all_workers.push_back(employee{id, name, surname, depertment, position});
+    all_workers.push_back(nowy);
     
     //zapiszemy te dane na koniec pliku
     std::fstream file;
@@ -116,11 +99,11 @@ void hrms::read_from_console()
     if(file.good())
     {
         file << std::endl;
-        file << id << std::endl;
-        file << name << std::endl;
-        file << surname << std::endl;
-        file << depertment << std::endl;
-        file << position << std::endl;
+        file << nowy.id << std::endl;
+        file << nowy.name << std::endl;
+        file << nowy.surname << std::endl;
+        file << nowy.departmentId << std::endl;
+        file << nowy.position << std::endl;
     }
     else throw WrongOpenFile();
 
