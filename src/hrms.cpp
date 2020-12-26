@@ -114,8 +114,7 @@ void hrms::print_connection_dep() //za malo mi drukuje :(
         std::string dep = it->first;
         for(int j=0; j <ilosc_w_dep; j++)
         {
-            std::cout << dep << "\t => \t" << it->second[j] << '\n';
-            j++;
+            std::cout << dep << "\t => \t" << connection_dep[dep][j] << '\n';
         }
         *it++;
     }   
