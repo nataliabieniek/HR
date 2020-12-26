@@ -140,3 +140,12 @@ std::fstream file;
     }
     file.close();
 }
+void hrms::print_salary()
+{
+    std::map<std::string, double>::iterator it = salary.begin();
+    int ilosc = salary.size();
+    for(int i=0; i<ilosc; i++)
+    {
+        std::cout << it->first << " zarabia: " << it->second << std::endl;
+    }
+}
