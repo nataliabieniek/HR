@@ -121,7 +121,7 @@ void hrms::print_connection_dep()
 }
 void hrms::read_salary()
 {
-std::fstream file;
+    std::fstream file;
     file.open("salary.txt");
     if(file.good())
     {
@@ -149,4 +149,14 @@ void hrms::print_salary()
         std::cout << it->first << " zarabia: " << it->second << std::endl;
         *it++;
     }
+}
+void hrms::print_department(std::string departmentid)
+{
+    std::map<std::string, std::vector <std::string>>::iterator it = connection_dep.begin();
+    int ilosc_w_dep = connection_dep[it->first].size();
+    for(int i=0; i<ilosc_w_dep; i++)
+    {
+        std::cout << departmentid << "\t => \t" << connection_dep[departmentid][i] << '\n';
+        *it++;
+    }   
 }
