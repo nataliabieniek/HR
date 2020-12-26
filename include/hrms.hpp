@@ -13,6 +13,7 @@ class hrms{
     void print_all_workers();
     void create_connection_dep();
     void print_connection_dep();
+    void read_salary();
     private:
     std::vector<employee> all_workers;
     std::map < std::string, std::vector <std::string>> connection_dep;

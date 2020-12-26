@@ -119,4 +119,24 @@ void hrms::print_connection_dep() //za malo mi drukuje :(
         *it++;
     }   
 }
-
+void hrms::read_salary()
+{
+std::fstream file;
+    file.open("salary.txt");
+    if(file.good())
+    {
+        while(!file.eof())
+        {
+           std::string id;
+           double money;
+           file >>id;
+           file >> money;
+           salary[id] = money;
+        }
+    }
+    else 
+    {
+        throw WrongOpenFile();
+    }
+    file.close();
+}
