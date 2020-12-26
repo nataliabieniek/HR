@@ -4,4 +4,4 @@ project( HR )
 
 include_directories( ./src ./include)
 
-add_executable(test ./src/main.cpp ./src/employee.cpp ./src/hrms.cpp ./src/date.txt)
+add_executable(test ./src/main.cpp ./src/employee.cpp ./src/hrms.cpp)

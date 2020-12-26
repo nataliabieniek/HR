@@ -41,6 +41,7 @@
         "string": "cpp",
         "vector": "cpp",
         "map": "cpp",
-        "xtree": "cpp"
+        "xtree": "cpp",
+        "algorithm": "cpp"
     }
 }
