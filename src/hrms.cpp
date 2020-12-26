@@ -5,6 +5,47 @@
 #include <string>
 #include <fstream>
 
+void hrms::write_again_salary()
+{
+    std::fstream file_salary;
+    file_salary.open("salary.txt", std::ios::trunc);
+    int i = all_workers.size();
+    for(int j=0; j<i; j++)
+    {
+        file_salary << all_workers[j].id << std::endl;
+        if(j==i-1)
+        {
+            file_salary << salary[all_workers[j].id];
+        }
+        else
+        {
+            file_salary << salary[all_workers[j].id] << std::endl;;
+        }
+    }
+    file_salary.close();
+}
+void hrms::write_again_date()
+{
+    std::fstream file_date;
+    file_date.open("date.txt", std::ios::trunc);
+    int i = all_workers.size(); 
+    for(int j=0; j<i; j++)
+    {
+        file_date << all_workers[j].id << std::endl;
+        file_date << all_workers[j].name << std::endl;
+        file_date << all_workers[j].surname << std::endl;
+        file_date << all_workers[j].departmentId << std::endl;
+        if(j==i-1)
+        {
+            file_date << all_workers[j].position;
+        }
+        else
+        {
+            file_date << all_workers[j].position << std::endl;;
+        }
+    }
+    file_date.close();
+}
 std::string upper_case(std::string word)
 {
     std::string wyraz = word;
@@ -167,8 +208,7 @@ void hrms::add(employee employee, std::string departmentid, double sal)
     int i = all_workers.size() - 1;
     connection_dep[all_workers[i].departmentId].push_back(all_workers[i].id);
     salary[departmentid] = sal;
-    //zmiany w plikach, stworz ponizej
-    
-    //czyszczenie plikow
-
+    //zmiany w plikach
+    write_again_date();
+    write_again_salary;
 }
