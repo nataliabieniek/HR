@@ -112,7 +112,7 @@ void hrms::read_from_console(employee nowy)
 void hrms::print_all_workers()
 {
     int liczba_pracownikow = all_workers.size();
-    std::cout << " Liczba wszystkich pracownikow:\t"<< liczba_pracownikow << std::endl;
+    std::cout << "Liczba wszystkich pracownikow:\t"<< liczba_pracownikow << std::endl;
     for(int i=0; i<liczba_pracownikow; i++)
     {
         all_workers[i].print();
@@ -219,4 +219,17 @@ void hrms::printSalariesSorted()
         for(j=0; all_workers[j].id!=obecna_osoba; ++j);
         std::cout << "ID: " << obecna_osoba << "\tImie: " << all_workers[j].name << "\tNazwisko: " << all_workers[j].surname << "\tDepartment: " << all_workers[j].departmentId << "\tPosition: " << all_workers[j].position << "\tPensja: " << vec[i].second << std::endl;
     }
+}
+void hrms::change_salary(std::string employeeId, double sal)
+{
+    //usuniecie poprzedniego elementu
+    std::map< std::string, double>::iterator szukaj;
+    szukaj = salary.find(employeeId);
+    salary.erase(szukaj);
+
+    //dodanie nowego elementu
+    salary[employeeId]=sal;
+
+    //poprawki w pliku
+    write_again_salary();
 }

@@ -16,6 +16,7 @@ class hrms{
     void read_salary();
     void print_salary();
     void printSalariesSorted();
+    void change_salary(std::string employeeId, double salary);
     void print_department(std::string departmentid);
     void add(employee employee, std::string departmentid, double salary);
     void write_again_date();
