@@ -26,13 +26,14 @@ int main()
         std::cout << "4\t-Wydrukuj zarobki wszystkich pracownikow" << std::endl;
         std::cout << "5\t-Wydrukuj posortowane zarobki wszystkich pracownikow" << std::endl;
         std::cout << "6\t-Dodaj nowego pracownika, wraz z jego zarobkami" << std::endl;
-        std::cout << "7\t-Wyjdz z programu" << std::endl;
+        std::cout << "7\t-Zmien pensje danego pracownika" << std::endl;
+        std::cout << "8\t-Wyjdz z programu" << std::endl;
         std::cin  >> wybor;
         std::cout << std::endl;
 
         switch(wybor)
         {
-            case 7:
+            case 8:
             {
                 dzialanie=false;
                 break;
@@ -84,6 +85,17 @@ int main()
                 employee nowy(id, name, surname, dep, pos);
                 przyklad.read_from_console(nowy);
                 przyklad.add(nowy, dep, sal);
+                break;
+            }
+            case 7:
+            {
+                std::string id;
+                double sal;
+                std::cout << "Podaj id pracownika:" << std::endl;
+                std::cin >> id;
+                std::cout << "Podaj nowa pensje" << std::endl;
+                std::cin >>  sal;
+                przyklad.change_salary(id, sal);
                 break;
             }
             default:

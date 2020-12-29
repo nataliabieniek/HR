@@ -24,6 +24,22 @@ map
 employee.hpp
 -
 
+C:/Users/Natalia Bieniek/Desktop/studia/3 sem/HR/src/hrms.cpp
+employee.hpp
+-
+hrms.hpp
+-
+iostream
+-
+cstdlib
+-
+string
+-
+fstream
+-
+algorithm
+-
+
 C:/Users/Natalia Bieniek/Desktop/studia/3 sem/HR/src/main.cpp
 employee.hpp
 -
