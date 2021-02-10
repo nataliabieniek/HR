@@ -5,4 +5,4 @@ Projekt stworzony czyto do ćwiczenia klas w c++.
 
 Klasa employee zawiera pojedynczego pracownika.
 
-Klasa HRMS zawiera łaczanie poszczegolnych informacji o pracownikach.
+Klasa HRMS zawiera łaczenie poszczegolnych informacji o pracownikach.
